@@ -11,11 +11,6 @@ var bcrypt = require("bcryptjs");
 const {user} = require("../models");
 const {modelNames} = require("mongoose");
 
-const transporter = nodemailer.createTransport(sendgridTransport({
-  auth: {
-    api_key: "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"
-  }
-}))
 
 exports.signup = (req, res) => {
   const {email, password, place, name, degree, phone} = req.body;
